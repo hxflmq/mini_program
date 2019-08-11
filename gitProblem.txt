@@ -1,0 +1,12 @@
+    如果遇到git秘钥.ssh 已经在github上 配置完了 但是上传时总是说“你没有正确的秘钥”解决方法如下
+    先确认一下你的ssh本地 是否成功   ssh -T git@github.com   
+    @1成功的提示 "You've successfully authenticated, but GitHub does not provide shell access 。" 
+    =》然后输入   git pull origin master --allow-unrelated-histories =>再然后就可以正常的push or pull啦~
+    @2错误的提示 “Host key verification failed.”这说明key验证失败了。
+    网上大部分的解答是基于Linux\Mac环境的，无非是修改权限，或者删除known_hosts公钥信息。
+    而我是win10，且偏偏.ssh 目录下缺少 known_hosts文件。
+    
+最后配置一下：
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+ 就可以解决啦~
