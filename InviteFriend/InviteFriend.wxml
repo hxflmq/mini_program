@@ -1,0 +1,53 @@
+
+<view>
+
+  <image src='/static/image/Bitmap(1).png' class='bgImgNew'></image>
+
+    <view class='imagePathBox' hidden="{{maskHidden == false}}">
+      <image class='closeThis' src='/static/images/clear_input.png' bindtap='closeThisPostBtn'></image>
+      <image src="{{imagePath}}" class='shengcheng'></image>
+      <button class='baocun' bindtap='baocun'>保存相册，分享到朋友圈</button>
+    </view>
+   <view hidden="{{maskHidden == false}}" class="mask"></view> 
+  <view class="canvas-box">
+      <canvas  style="width: 375px;height: 667px;position:fixed;top:9999px" canvas-id="mycanvas"/>
+  </view>  
+</view>
+<!-- 二维码 -->
+<canvas canvas-id="myQrcode" style='position: absolute;left:30rpx;top:261rpx'></canvas>
+
+
+
+<view class='integral_content'>
+<!-- 推荐码 -->
+<view>
+  <text class='inteCode'>
+    <text class='left_code'>推荐码</text>
+    <text class='right_code'>{{inteCode}}</text>
+  </text>
+<!--推荐人  -->
+  <text class='inteperson'>
+    <text class='left_code'>推荐人</text>
+    <text class='right_code'>{{inteperson}}</text>
+  </text>
+  <!-- 推荐方式 -->
+  <view class='method_content'>
+  <button open-type='share' class='decText' catchtap='share_Friend'  plain="true">
+<image src='/static/image/Group8.png' class='wx'></image>
+<text>微信好友</text>
+  </button>
+ 
+  <view class='decText' catchtap='formSubmit'>
+<image src='/static/image/Group5Copy.png' class='friend'></image>
+  <text>微信朋友圈</text>
+  </view>
+  <view class='decText' catchtap='formSubmit'>
+<image src='/static/image/Group7.png' class='prcture'></image>
+  <text>生成图片</text>
+  </view>
+  </view>
+</view>
+</view>
+
+
+
