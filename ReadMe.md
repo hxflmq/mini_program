@@ -10,15 +10,10 @@
  
  // 2.utils/user.js 是对微信登录做的处理  utils/util.js 是对后端请求方式做的处理  
  
-<<<<<<< HEAD
  // 3.utils/weapp.qrcode.min.js 生成二维码插件 utils/wxcharts-min 图标插件 因为canvas为原生组件 层级最高 用时会遇到  
  
- // 问题  后续 我会将解决的问题 一并附上  
+ // 问题  后续 我会将解决的问题 一并附上  (见：solveCanvasProblem文件 解决方案)
  
  // 4.app.js为微信更新的处理  
-=======
- // 3.utils/weapp.qrcode.min.js 生成二维码插件 utils/wxcharts-min 图标插件 因为canvas为原生组件 层级最高 用时会遇到
- // 问题  后续 我会将解决的问题 一并附上  
- 
- // 4.app.js为微信更新的处理  
->>>>>>> 1472360b7084bc9bdc9da4249859a345fe5e93ae
+
+
